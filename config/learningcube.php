@@ -186,18 +186,25 @@ return [
             ['label' => 'Students guided across boards', 'value' => '1000+ learners'],
             ['label' => 'Top performer core subject scores', 'value' => 'Consistent 90%+'],
         ],
+        'google_reviews_url' => 'https://www.google.com/search?q=learning-cube+coaching+reviews',
         'testimonials' => [
             [
                 'quote' => 'Learning-Cube helped my son move from 60s to 90s in Maths within a year. The teachers are patient and very supportive.',
                 'author' => 'Parent of Class 9 CBSE Student',
+                'time' => '2 months ago',
+                'stars' => 5,
             ],
             [
                 'quote' => 'The regular tests and feedback kept me on track for my Class 10 boards. I felt confident during exams.',
                 'author' => 'Class 10 ICSE Student',
+                'time' => '1 month ago',
+                'stars' => 5,
             ],
             [
                 'quote' => 'Hybrid learning and recorded sessions meant I never missed a concept even during travel.',
                 'author' => 'Class 11 IGCSE Student',
+                'time' => '3 weeks ago',
+                'stars' => 5,
             ],
         ],
         'stories' => [
