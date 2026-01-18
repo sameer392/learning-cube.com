@@ -83,7 +83,7 @@
         @yield('content')
     </main>
 
-    <footer class="bg-navy text-white mt-16 relative overflow-hidden">
+    <footer class="bg-navy text-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 py-12">
             <div class="grid md:grid-cols-[1.4fr_auto_auto_1fr] gap-10 lg:gap-14 items-start">
                 <!-- Left: Branding, description, illustration + curved separator -->
