@@ -3,8 +3,8 @@
 @section('content')
     <section class="bg-navy">
         <div class="max-w-6xl mx-auto px-4 py-16">
-            <h2 class="text-3xl md:text-4xl font-semibold text-accent mb-8">Our Story:</h2>
-            <div class="space-y-6 text-white max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-semibold text-accent mb-8 text-center">Our Story</h2>
+            <div class="space-y-6 text-white text-justify">
                 <p class="text-base md:text-lg leading-relaxed">
                     Learning-Cube is a nurturing space where young minds discover clarity, confidence, and a genuine love for learning. Designed for students of Classes 6–12, our programs focus on building strong conceptual foundations, disciplined study habits, and a mindset that embraces growth.
                 </p>
@@ -24,88 +24,70 @@
         </div>
     </section>
 
-    <section class="bg-white py-16">
+    <section class="bg-navy py-16">
         <div class="max-w-6xl mx-auto px-4">
-            <div class="section-title text-navy mb-12">
-                <p class="uppercase tracking-[0.35em] text-xs text-slate-400">Message from the Founders</p>
-                <h2 class="text-3xl font-semibold mt-2">Meet Our Leadership</h2>
-            </div>
-            <!-- Mobile: Image + Content for each person | Desktop: Images column + Content column -->
-            <div class="space-y-16">
-                <!-- Vikas Section -->
-                <div class="grid md:grid-cols-2 gap-12 items-start">
-                    <div class="flex justify-center md:justify-start relative">
-                        <div class="relative group w-full max-w-sm">
-                            <div class="absolute -inset-4 bg-gradient-to-br from-accent/20 to-navy/10 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
-                            <div class="relative bg-white rounded-2xl p-4 shadow-lg border-2 border-slate-100">
-                                <div class="aspect-square w-full overflow-hidden rounded-xl">
-                                    <img src="{{ asset('images/vikas.svg') }}" alt="Vikas Gupta" class="w-full h-full object-contain">
-                                </div>
-                            </div>
-                        </div>
+            <h2 class="text-3xl md:text-4xl font-bold text-accent text-center">Meet Our Team</h2>
+            <p class="text-indigo-100 text-center text-base md:text-lg mt-4 max-w-2xl mx-auto">The expert educators driving academic excellence and student success at Learning-Cube Coaching.</p>
+
+            <div class="mt-12 grid md:grid-cols-2 gap-8 lg:gap-10">
+                <!-- Vikas Gupta -->
+                <div class="bg-white rounded-2xl p-8 lg:p-10 shadow-card border border-slate-100 text-left">
+                    <div class="w-32 h-32 rounded-full overflow-hidden border-2 border-slate-200 flex-shrink-0 mb-6 mx-auto">
+                        <img src="{{ asset('images/vikas.svg') }}" alt="Vikas Gupta" class="w-full h-full object-cover">
                     </div>
-                    <div class="bg-gradient-to-br from-slate-50 to-white rounded-3xl p-8 shadow-card/40 border border-slate-100">
-                        <h3 class="text-2xl font-semibold text-navy">Vikas Gupta</h3>
-                        <p class="text-sm text-slate-500 mt-1">Founder, Education Cube & Learning Cube</p>
-                        <p class="mt-6 text-slate-600 leading-relaxed">
-                            With over 25 years of experience in academia and global education, my journey—from educator to international consultant—has strengthened my belief that true success depends on receiving the Right Education, at the Right Time, in the Right Way.
-                        </p>
-                        <p class="mt-4 text-slate-600 leading-relaxed">
-                            Learning-Cube was created with a clear purpose: To build an environment where academic excellence meets holistic growth. Here, we do more than teach chapters—we inspire curiosity, discipline, confidence, and a sense of purpose.
-                        </p>
-                        <p class="mt-4 text-slate-600 leading-relaxed">
-                            Every student who joins Learning Cube becomes part of a larger vision—to shape capable thinkers, confident achievers, and responsible global citizens who are prepared for tomorrow's world.
-                        </p>
-                        <p class="mt-6 text-navy font-semibold italic border-l-4 border-accent pl-4">"Guiding learners toward academic excellence and global success."</p>
+                    <h3 class="text-2xl md:text-3xl font-bold text-accent text-center">Vikas Gupta</h3>
+                    <p class="text-navy text-base mt-1 text-center font-medium">Founder & CEO</p>
+                    <div class="mt-6 space-y-4 text-slate-600 leading-relaxed">
+                        <p>My professional journey from educator to international consultant and mentor has reinforced my belief that true success stems from proper education, guided in the right direction at the right time. With over 25 years of experience in academia and global education, I have witnessed how effective mentorship and structured learning can transform young minds into confident achievers.</p>
+                        <p>Learning-Cube was founded on this very philosophy—to create an environment where academic excellence meets holistic growth. Here, we don't just focus on teaching subjects; we cultivate curiosity, discipline, and purpose. Every student who walks through our doors is part of a larger vision—to nurture thinkers, innovators, and responsible global citizens prepared for the challenges of tomorrow.</p>
+                    </div>
+                    <div class="mt-6 pt-6 border-t-2 border-dotted border-slate-200">
+                        <p class="text-accent italic font-medium text-center">"Guiding learners toward academic excellence and global success."</p>
                     </div>
                 </div>
-                
-                <!-- Avinash Section -->
-                <div class="grid md:grid-cols-2 gap-12 items-start">
-                    <div class="flex justify-center md:justify-start relative">
-                        <div class="relative group w-full max-w-sm">
-                            <div class="absolute -inset-4 bg-gradient-to-br from-accent/20 to-navy/10 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
-                            <div class="relative bg-white rounded-2xl p-4 shadow-lg border-2 border-slate-100">
-                                <div class="aspect-square w-full overflow-hidden rounded-xl">
-                                    <img src="{{ asset('images/avinash.svg') }}" alt="Avinash Dubey" class="w-full h-full object-contain">
-                                </div>
-                            </div>
-                        </div>
+                <!-- Avinash Dubey -->
+                <div class="bg-white rounded-2xl p-8 lg:p-10 shadow-card border border-slate-100 text-left">
+                    <div class="w-32 h-32 rounded-full overflow-hidden border-2 border-slate-200 flex-shrink-0 mb-6 mx-auto">
+                        <img src="{{ asset('images/avinash.svg') }}" alt="Avinash Dubey" class="w-full h-full object-cover">
                     </div>
-                    <div class="bg-gradient-to-br from-slate-50 to-white rounded-3xl p-8 shadow-card/40 border border-slate-100">
-                        <h3 class="text-2xl font-semibold text-navy">Avinash Dubey</h3>
-                        <p class="text-sm text-slate-500 mt-1">Co-Founder, Learning Cube</p>
-                        <p class="mt-6 text-slate-600 leading-relaxed">
-                            My journey—from a B.Tech graduate of Vellore Institute of Technology (VIT) to a published novelist—has shown me that success is built not only on knowledge but on the right guidance that shapes character, discipline, and perspective.
-                        </p>
-                        <p class="mt-4 text-slate-600 leading-relaxed">
-                            At Learning Cube, every student is a part of my extended family. My aim is not only to help them excel in academics but to prepare them to contribute meaningfully to society.
-                        </p>
+                    <h3 class="text-2xl md:text-3xl font-bold text-accent text-center">Mr. Avinash Dubey</h3>
+                    <p class="text-navy text-base mt-1 text-center font-medium">Co - Founder</p>
+                    <div class="mt-6 space-y-4 text-slate-600 leading-relaxed">
+                        <p>My professional path—from a qualified B.Tech Engineer from the esteemed Vellore Institute of Technology (VIT) to a published novelist—has given me a unique perspective on what it truly takes to succeed. I've learned that the most powerful tool for conquering the stage called the world is not just technical skill, but the Right Education—imparted at the Right time and in the Right way.</p>
+                        <p>This belief is the bedrock of Learning Cube. I consider every student who walks through our doors to be a part of my extended family, and my greatest joy is seeing them succeed and contribute meaningfully to mankind. We are here not just to teach subjects, but to nurture the future generation.</p>
+                    </div>
+                    <div class="mt-6 pt-6 border-t-2 border-dotted border-slate-200">
+                        <p class="text-accent italic font-medium text-center">"Right Education—imparted at the Right time and in the Right way."</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-10">
-        <div class="bg-white rounded-3xl p-8 shadow-card border border-slate-100">
-            <h2 class="text-2xl font-semibold text-navy">Our Vision</h2>
-            <p class="mt-4 text-slate-600">
-                To make high-quality, personalized academic support accessible to every school-going child in India, while nurturing them into ethical, informed, confident, and globally aware individuals.
-            </p>
-            <p class="mt-4 text-slate-600">
-                We envision students who do not merely study for exams, but who understand, question, analyze, and apply knowledge meaningfully.
-            </p>
-        </div>
-        <div class="bg-navy text-white rounded-3xl p-8 shadow-card">
-            <h2 class="text-2xl font-semibold">Our Mission</h2>
-            <ul class="mt-5 space-y-3 text-white/85">
-                <li class="flex gap-3"><i class="ri-star-fill text-accent"></i>Build strong conceptual foundations in every core subject</li>
-                <li class="flex gap-3"><i class="ri-star-fill text-accent"></i>Help students approach every exam with clarity, confidence, and strategy</li>
-                <li class="flex gap-3"><i class="ri-star-fill text-accent"></i>Bridge the gap between school learning and true understanding</li>
-                <li class="flex gap-3"><i class="ri-star-fill text-accent"></i>Inspire a lifelong passion for learning, thinking, and problem-solving</li>
-                <li class="flex gap-3"><i class="ri-star-fill text-accent"></i>Prepare students to become responsible human beings and global contributors</li>
-            </ul>
+    <section class="bg-navy py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-accent text-center mb-12">Mission, Vision and Value</h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-8 shadow-card border border-slate-100 text-left">
+                    <h3 class="text-xl font-bold text-accent">Our Mission</h3>
+                    <p class="mt-4 text-slate-600 leading-relaxed">
+                        Our mission is to inspire a lifelong love for learning by nurturing curiosity, critical thinking, and academic excellence. We aim to empower every student with the confidence, skills, and values to succeed in exams, careers, and real life.
+                    </p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-card border border-slate-100 text-left">
+                    <h3 class="text-xl font-bold text-accent">Our Vision</h3>
+                    <p class="mt-4 text-slate-600 leading-relaxed">
+                        Our vision is to build a world where students don't just study for marks, but embrace knowledge as a path to purpose. We strive to develop ethical, intelligent, globally aware individuals who contribute positively to society and lead with compassion.
+                    </p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-card border border-slate-100 text-left">
+                    <h3 class="text-xl font-bold text-accent">Our Value</h3>
+                    <p class="mt-4 text-slate-600 leading-relaxed">
+                        Learning Cube is built on values of passion, integrity, curiosity, empathy, and excellence. We believe in personalized learning, emotional growth, and subject mastery—ensuring every student feels supported, confident, and motivated to achieve their fullest potential.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
