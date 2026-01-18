@@ -258,7 +258,7 @@ return [
         'policies' => [
             ['label' => 'Privacy Policy', 'href' => '#'],
             ['label' => 'Terms of Service', 'href' => '#'],
-            ['label' => 'Sitemap', 'href' => '#'],
+            ['label' => 'Sitemap', 'href' => '/sitemap.xml'],
         ],
         'copyright' => '© 2025 Learning-Cube Coaching Classes. All Rights Reserved.',
     ],
