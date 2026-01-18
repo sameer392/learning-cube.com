@@ -1,0 +1,18 @@
+<IfModule mime_module>
+    AddHandler application/x-httpd-ea-php82 .php .php8 .phtml
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Redirect root requests directly to the Laravel front controller
+    RewriteRule ^$ public/index.php [L]
+
+    # Only prepend /public for paths not already pointing there
+    RewriteCond %{REQUEST_URI} !^/lc/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+
+DirectoryIndex public/index.php
+Options -Indexes

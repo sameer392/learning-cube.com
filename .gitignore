@@ -1,0 +1,77 @@
+# Laravel
+/.env
+/.env.backup
+/.env.production
+/.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/.fleet
+/.idea
+/.nova
+/.phpunit.cache
+/.vscode
+/.zed
+
+# Dependencies
+/node_modules
+/vendor
+
+# Build assets
+/public/build
+/public/hot
+/public/storage
+/public/mix-manifest.json
+
+# Storage
+/storage/*.key
+/storage/pail
+/storage/logs/*.log
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/app/public/*
+!/storage/app/public/.gitignore
+!/storage/framework/cache/.gitignore
+!/storage/framework/sessions/.gitignore
+!/storage/framework/views/.gitignore
+!/storage/logs/.gitignore
+
+# Testing
+/coverage
+/.phpunit.cache
+.phpunit.result.cache
+
+# IDE
+.idea
+.vscode
+.fleet
+.nova
+.zed
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Misc
+auth.json
+.phpactor.json
+*.cache
+*.tmp
+*.temp

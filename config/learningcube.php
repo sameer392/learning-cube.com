@@ -1,0 +1,160 @@
+<?php
+
+return [
+    'brand' => [
+        'name' => 'Learning-Cube Coaching-Classes for STD 6th to 12th',
+        'tagline' => 'Strong Foundations. Confident Results.',
+        'descriptor' => 'India’s trusted tutoring & coaching hub for Classes 6–12 across all major school boards.',
+    ],
+    'navigation' => [
+        ['label' => 'Home', 'route' => 'home'],
+        ['label' => 'About', 'route' => 'about'],
+        ['label' => 'Programs', 'route' => 'programs'],
+        ['label' => 'Results & Testimonials', 'route' => 'results'],
+        ['label' => 'Resources', 'route' => 'resources'],
+        ['label' => 'Contact', 'route' => 'contact'],
+    ],
+    'cta' => [
+        ['label' => 'Book a Free Demo Class', 'href' => '#contact'],
+        ['label' => 'Talk to an Academic Counsellor', 'href' => '#contact'],
+    ],
+    'programs' => [
+        [
+            'name' => 'Foundation Program',
+            'grades' => 'Classes 6–8',
+            'focus' => 'A structured learning program designed to strengthen core concepts, build confidence, and develop strong academic habits for future board and competitive success.',
+            'boards' => 'CBSE, ICSE, State Boards',
+            'mode' => 'Online + Classroom',
+            'frequency' => '3–4 classes / week',
+            'who' => 'Students who need concept building, homework guidance, and Olympiad introduction.',
+            'mode_detail' => 'Online / Offline / Hybrid with recorded sessions.',
+            'duration' => 'Annual plan | 3–4 classes per week',
+        ],
+        [
+            'name' => 'Board Prep Program',
+            'grades' => 'Classes 9–10',
+            'focus' => 'A rigorous board-oriented program combining NCERT mastery, reference learning, chapter-wise assessments, and high-impact revisions to ensure exceptional results in Class 9th and 10th.',
+            'boards' => 'CBSE, ICSE, State Boards',
+            'mode' => 'Hybrid batches',
+            'frequency' => '4–5 classes / week',
+            'who' => 'Learners targeting high board scores with rigorous practice.',
+            'mode_detail' => 'Online classes + weekend centre doubt clinics.',
+            'duration' => '10–12 month coverage + pre-board bootcamps',
+        ],
+        [
+            'name' => 'Senior Success Program',
+            'grades' => 'Classes 11–12',
+            'focus' => '',
+            'boards' => 'CBSE, ISC, State Boards, JEE, NEET, CUET',
+            'mode' => 'Online + Partner Centres',
+            'frequency' => '5 classes / week',
+            'who' => 'Science, Commerce, and Humanities students needing depth + exam skills.',
+            'mode_detail' => 'Live & lab support with problem-solving pods.',
+            'duration' => '2-year & crash tracks | 4–5 classes per week',
+        ],
+        [
+            'name' => 'Exam Booster & Holiday Batches',
+            'grades' => 'Short-Term',
+            'focus' => '',
+            'boards' => 'All Boards',
+            'mode' => 'Fast-track online/live',
+            'frequency' => 'Custom schedules',
+            'who' => 'Students seeking short-term improvement in specific subjects or exams.',
+            'mode_detail' => 'Power-packed online/live sprint batches.',
+            'duration' => '4–12 week intensives + revision marathons',
+        ],
+    ],
+    'specialised_support' => [
+        'Homework & Assignment Support',
+        'Doubt-Solving Sessions',
+        'Remedial Classes',
+        'Holiday Crash Courses',
+    ],
+    'why_us' => [
+        ['title' => 'Small Batches & Individual Attention', 'body' => 'Limited students per batch so every child gets space to ask questions and grow.'],
+        ['title' => 'Board-Specific Planning', 'body' => 'Separate planning and material for CBSE, ICSE, State Boards, IB & Cambridge curricula.'],
+        ['title' => 'Expert & Trained Faculty', 'body' => 'Experienced teachers with strong subject knowledge and a student-friendly approach.'],
+        ['title' => 'Regular Testing & Feedback', 'body' => 'Weekly tests, monthly report cards, and parent–teacher reviews.'],
+        ['title' => 'Hybrid Learning (Online + Centre)', 'body' => 'Attend from home or at partner centres, with recorded sessions for revision.'],
+        ['title' => 'WhatsApp Updates & Progress Reports', 'body' => 'Attendance, marks, and key updates shared regularly with parents.'],
+    ],
+    'subjects' => [
+        'boards' => ['CBSE', 'ICSE', 'State Boards', 'IB', 'Cambridge (IGCSE & A-Levels)'],
+        'middle_school' => ['Mathematics', 'Science', 'English', 'Social Science', 'Hindi', 'Regional Languages'],
+        'senior_science' => ['Physics', 'Chemistry', 'Mathematics', 'Biology', 'Computer Science'],
+        'senior_commerce' => ['Accountancy', 'Business Studies', 'Economics', 'Mathematics'],
+        'senior_humanities' => ['Economics', 'Political Science', 'History', 'Geography', 'Sociology', 'Psychology'],
+    ],
+    'support_steps' => [
+        ['title' => 'Free Academic Counselling', 'body' => 'We understand the student’s current level, board, and goals.'],
+        ['title' => 'Customized Study Plan', 'body' => 'We recommend the right batch, schedule, and subjects.'],
+        ['title' => 'Engaging Classes & Doubt Support', 'body' => 'Concept-based teaching with live problem solving.'],
+        ['title' => 'Regular Tests & Analysis', 'body' => 'Topic-wise tests, report cards, and improvement strategies.'],
+        ['title' => 'Continuous Parent Communication', 'body' => 'Monthly reviews and easy access to teachers/coordinators.'],
+    ],
+    'results' => [
+        'stats' => [
+            ['label' => 'Improved marks within one term', 'value' => '90% students'],
+            ['label' => 'Students guided across boards', 'value' => '1000+ learners'],
+            ['label' => 'Top performer core subject scores', 'value' => 'Consistent 90%+'],
+        ],
+        'testimonials' => [
+            [
+                'quote' => 'Learning-Cube helped my son move from 60s to 90s in Maths within a year. The teachers are patient and very supportive.',
+                'author' => 'Parent of Class 9 CBSE Student',
+            ],
+            [
+                'quote' => 'The regular tests and feedback kept me on track for my Class 10 boards. I felt confident during exams.',
+                'author' => 'Class 10 ICSE Student',
+            ],
+            [
+                'quote' => 'Hybrid learning and recorded sessions meant I never missed a concept even during travel.',
+                'author' => 'Class 11 IGCSE Student',
+            ],
+        ],
+        'stories' => [
+            ['title' => 'From 65% to 88% in Class 9 Maths (CBSE)', 'body' => 'Focused doubt resolution, Saturday test series, and revision bootcamps boosted conceptual clarity and exam stamina.'],
+            ['title' => 'ICSE Class 10 – Science from 70 to 92', 'body' => 'Targeted lab manual practice, weekly practical orals, and rapid-fire quizzes improved accuracy.'],
+            ['title' => 'Holiday Crash Course for Class 12 Commerce', 'body' => '90-day intensive revision with problem marathons and evaluation rubrics delivered an aggregate of 93%.'],
+        ],
+    ],
+    'resources' => [
+        ['title' => 'How to Choose the Right Stream after Class 10', 'description' => 'A friendly guide to align strengths with Science, Commerce, or Humanities pathways.'],
+        ['title' => 'How to Prepare for Board Exams without Stress', 'description' => 'Simple rituals plus productivity frameworks to avoid burnout.'],
+        ['title' => 'Study Timetable Templates for Classes 6–12', 'description' => 'Ready-to-use weekly layouts to balance school, coaching, and hobbies.'],
+    ],
+    'contact' => [
+        'headline' => 'Get in Touch with Learning-Cube',
+        'subtext' => 'Have questions about batches, fees, or programs? Share a few details – our counsellor will call you within 24 working hours.',
+        'phone' => ['+91 98980 75217', '+91 70160 46616'],
+        'email' => 'support@learning-cube.com',
+        'hours' => '10:00 AM – 8:00 PM (IST), Monday to Sunday',
+        'address' => '217, Exult Shoppers, Nr. Sidhhiviniyak Temple, Vesu Main Road, Vesu, Surat, Gujarat-395007',
+        'social' => [
+            ['label' => 'Instagram', 'href' => '#', 'icon' => 'ri-instagram-line'],
+            ['label' => 'Facebook', 'href' => '#', 'icon' => 'ri-facebook-circle-line'],
+            ['label' => 'YouTube', 'href' => '#', 'icon' => 'ri-youtube-line'],
+            ['label' => 'LinkedIn', 'href' => '#', 'icon' => 'ri-linkedin-line'],
+        ],
+    ],
+    'footer' => [
+        'company' => [
+            ['label' => 'About Us', 'route' => 'about'],
+            ['label' => 'Programs', 'route' => 'programs'],
+            ['label' => 'Results', 'route' => 'results'],
+            ['label' => 'Careers', 'href' => '#'],
+        ],
+        'student_parent' => [
+            ['label' => 'Demo Class', 'href' => '#contact'],
+            ['label' => 'Fees & Batches', 'href' => '#contact'],
+            ['label' => 'FAQs', 'href' => '#'],
+        ],
+        'policies' => [
+            ['label' => 'Privacy Policy', 'href' => '#'],
+            ['label' => 'Terms of Service', 'href' => '#'],
+            ['label' => 'Sitemap', 'href' => '#'],
+        ],
+        'copyright' => '© 2025 Learning-Cube Coaching Classes. All Rights Reserved.',
+    ],
+];
+
