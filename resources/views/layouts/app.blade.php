@@ -64,7 +64,7 @@
             <a href="{{ route('home') }}" class="flex items-center">
                 <img src="{{ asset('images/logo.svg') }}" alt="Learning-Cube Coaching Classes" class="w-40 lg:w-48">
             </a>
-            <nav class="hidden lg:flex items-center gap-6 text-sm font-medium">
+            <nav class="hidden lg:flex items-center gap-6 text-base font-medium">
                 @foreach ($navigation as $item)
                     <a href="{{ isset($item['route']) ? route($item['route']) : ($item['href'] ?? '#') }}"
                         class="text-slate-600 hover:text-accent transition-colors {{ request()->routeIs($item['route'] ?? '') ? 'text-accent' : '' }}">
