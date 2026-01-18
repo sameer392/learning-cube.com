@@ -29,6 +29,7 @@ The site highlights strengths (experienced teachers, chapter-wise tests, small b
 | Results & Testimonials | `/results` | Stats, student stories, testimonial carousel with “View all reviews” (Google) |
 | Resources | `/resources` | Articles and guides |
 | Contact | `/contact` | Phone, email, hours, address, and contact form / CTAs |
+| Sitemap | `/sitemap.xml` | XML sitemap for search engines (used when `APP_URL` is e.g. `https://learning-cube.com`) |
 
 ---
 
@@ -124,6 +125,8 @@ Editable content is centralised in **`config/learningcube.php`**:
 | `footer` | Footer title, description, image, links, address, policies, copyright |
 
 To change the “View all reviews” link, set `results.google_reviews_url` to your Google Business / Maps reviews URL.
+
+**Sitemap** — `/sitemap.xml` is generated from `APP_URL` and lists Home, About, Programs, Results, Resources, and Contact. Set `APP_URL=https://learning-cube.com` in `.env` for production. `public/robots.txt` references `https://learning-cube.com/sitemap.xml`.
 
 ---
 
