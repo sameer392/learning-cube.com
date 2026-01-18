@@ -17,7 +17,7 @@ class PageController extends Controller
     {
         return view('pages.home', [
             'programs' => $this->content['programs'],
-            'whyUs' => $this->content['why_us'],
+            'strengths' => $this->content['strengths'],
             'subjects' => $this->content['subjects'],
             'supportSteps' => $this->content['support_steps'],
             'results' => $this->content['results'],

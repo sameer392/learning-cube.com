@@ -83,71 +83,97 @@
         @yield('content')
     </main>
 
-    <footer class="bg-navy text-white mt-16">
-        <div class="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-4 gap-10">
-            <div>
-                <p class="font-semibold text-xl">{{ $brand['name'] }}</p>
-                <p class="text-sm text-slate-200 mt-2 max-w-xs">{{ $brand['descriptor'] }}</p>
-                <div class="flex gap-3 mt-6">
-                    @foreach ($contactInfo['social'] as $social)
-                        <a href="{{ $social['href'] }}" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white text-xl hover:bg-accent transition"
-                            aria-label="{{ $social['label'] }}">
-                            <i class="{{ $social['icon'] }}"></i>
-                        </a>
-                    @endforeach
+    <footer class="bg-navy text-white mt-16 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-[1.4fr_auto_auto_1fr] gap-10 lg:gap-14 items-start">
+                <!-- Left: Branding, description, illustration + curved separator -->
+                <div class="relative">
+                    <h3 class="text-accent font-bold text-lg md:text-xl">{{ $footerLinks['title'] ?? $brand['name'] }}</h3>
+                    <p class="text-white/90 text-sm mt-2 max-w-md">{{ $footerLinks['description'] ?? $brand['descriptor'] }}</p>
+                    <div class="relative mt-6 flex justify-start">
+                        <!-- Dark purple/indigo curve at bottom left, rising to the right -->
+                        <svg class="absolute bottom-0 left-0 w-full max-w-md h-28 md:h-36 pointer-events-none z-0" viewBox="0 0 400 100" preserveAspectRatio="none" aria-hidden="true">
+                            <path d="M 0 100 C 120 100 280 10 400 35 L 400 100 L 0 100 Z" fill="#4c1d95"/>
+                        </svg>
+                        @if(!empty($footerLinks['image_webp']))
+                            <picture>
+                                <source srcset="{{ asset($footerLinks['image_webp']) }}" type="image/webp">
+                                <img src="{{ asset($footerLinks['image'] ?? 'images/logo.svg') }}" alt="" class="relative z-10 w-full max-w-xs md:max-w-sm h-auto object-contain" width="800" height="602">
+                            </picture>
+                        @else
+                            <img src="{{ asset($footerLinks['image'] ?? 'images/logo.svg') }}" alt="" class="relative z-10 w-full max-w-xs md:max-w-sm h-auto object-contain">
+                        @endif
+                    </div>
+                </div>
+                <!-- Company -->
+                <div>
+                    <p class="font-semibold text-accent mb-4">Company</p>
+                    <ul class="space-y-2 text-sm text-white">
+                        @foreach ($footerLinks['company'] as $link)
+                            <li>
+                                <a href="{{ isset($link['route']) ? route($link['route']) : ($link['href'] ?? '#') }}" class="hover:text-accent transition">
+                                    {{ $link['label'] }}
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+                <!-- Student or Parents + Follow us (no social icons) -->
+                <div>
+                    <p class="font-semibold text-accent mb-4">Student or Parents</p>
+                    <ul class="space-y-2 text-sm text-white">
+                        @foreach ($footerLinks['student_parent'] as $link)
+                            <li>
+                                <a href="{{ $link['route'] ?? $link['href'] ?? '#' }}" class="hover:text-accent transition">
+                                    {{ $link['label'] }}
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                    @if(!empty($footerLinks['follow_us_label']))
+                        <p class="text-white text-sm mt-5">{{ $footerLinks['follow_us_label'] }}</p>
+                    @endif
+                </div>
+                <!-- Contact -->
+                <div>
+                    <p class="font-semibold text-accent mb-4">Contact</p>
+                    <ul class="text-sm text-white space-y-3">
+                        <li>
+                            <span class="text-white/80">Phone:</span>
+                            <div class="flex flex-col mt-0.5">
+                                @foreach ($contactInfo['phone'] as $phone)
+                                    <a href="tel:{{ preg_replace('/\s+/', '', $phone) }}" class="hover:text-accent transition">{{ $phone }}</a>
+                                @endforeach
+                            </div>
+                        </li>
+                        <li>
+                            <span class="text-white/80">Email:</span>
+                            <a href="mailto:{{ $contactInfo['email'] }}" class="block hover:text-accent transition mt-0.5">{{ $contactInfo['email'] }}</a>
+                        </li>
+                        <li>
+                            <span class="text-white/80">Location:</span>
+                            <div class="mt-0.5">
+                                @if(!empty($footerLinks['address_lines']))
+                                    @foreach ($footerLinks['address_lines'] as $line)
+                                        {{ $line }}<br>
+                                    @endforeach
+                                @else
+                                    {{ $contactInfo['address'] }}
+                                @endif
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div>
-                <p class="font-semibold mb-4">Company</p>
-                <ul class="space-y-2 text-sm text-slate-200">
-                    @foreach ($footerLinks['company'] as $link)
-                        <li>
-                            <a href="{{ $link['route'] ?? $link['href'] ?? '#' }}" class="hover:text-accent transition">
-                                {{ $link['label'] }}
-                            </a>
-                        </li>
-                    @endforeach
-                </ul>
-            </div>
-            <div>
-                <p class="font-semibold mb-4">Student & Parent</p>
-                <ul class="space-y-2 text-sm text-slate-200">
-                    @foreach ($footerLinks['student_parent'] as $link)
-                        <li>
-                            <a href="{{ $link['route'] ?? $link['href'] ?? '#' }}" class="hover:text-accent transition">
-                                {{ $link['label'] }}
-                            </a>
-                        </li>
-                    @endforeach
-                </ul>
-            </div>
-            <div>
-                <p class="font-semibold mb-4">Contact</p>
-                <ul class="text-sm text-slate-200 space-y-2">
-                    <li><span class="text-slate-400">Phone:</span>
-                        <div class="flex flex-col">
-                            @foreach ($contactInfo['phone'] as $phone)
-                                <a href="tel:{{ preg_replace('/\s+/', '', $phone) }}" class="hover:text-accent transition">{{ $phone }}</a>
-                            @endforeach
-                        </div>
-                    </li>
-                    <li><span class="text-slate-400">Email:</span>
-                        <a href="mailto:{{ $contactInfo['email'] }}" class="block hover:text-accent transition">
-                            {{ $contactInfo['email'] }}
-                        </a>
-                    </li>
-                    <li><span class="text-slate-400">Location:</span>
-                        <p>{{ $contactInfo['address'] }}</p>
-                    </li>
-                </ul>
-            </div>
         </div>
+        <!-- Bottom bar: copyright | legal links with pipes -->
         <div class="border-t border-white/10">
-            <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-sm text-slate-300">
+            <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-sm text-slate-300">
                 <p>{{ $footerLinks['copyright'] }}</p>
-                <div class="flex flex-wrap gap-4">
+                <div class="flex flex-wrap items-center gap-x-2">
                     @foreach ($footerLinks['policies'] as $link)
                         <a href="{{ $link['href'] }}" class="hover:text-accent transition">{{ $link['label'] }}</a>
+                        @if(!$loop->last)<span class="text-white/40">|</span>@endif
                     @endforeach
                 </div>
             </div>
